@@ -64,7 +64,6 @@ def extract_text_from_pdf(pdf_file: str) -> [str]:
 
 if __name__ == '__main__':
     name_of_pdf = input("Enter the name of the PDF file: ")
-
     extracted_text = extract_text_from_pdf(name_of_pdf)
     song_ids = set()  # Use a set to avoid duplicates
     for text in extracted_text:
@@ -73,7 +72,6 @@ if __name__ == '__main__':
             song_ids.add(song_id)  # Add the song ID to the set
             print(text)
     # input("Enter your Spotify username: "))
-
     username = '31xbus24n7atxw4l7voszoquntae'
-    playlist_name = name_of_pdf
+    playlist_name = 'TLQNF.pdf'
     create_playlist_and_add_songs(username, playlist_name, list(song_ids))  # Convert the set to a list
